@@ -39,7 +39,7 @@ export default async function AllGamesCollection() {
                   <h2>{game.title}</h2>
                   <p>{game.description}</p>
                   {/* <p>{game.desc2}</p> */}
-                  <div className="store-badges">
+                  {/* <div className="store-badges">
                     <button className="store-btn">
                       <a href={game.links?.ios} target="_blank" rel="noopener noreferrer">
                         <img src="appstore.png" />
@@ -50,7 +50,26 @@ export default async function AllGamesCollection() {
                         <img src="googleplay.png" />
                       </a>
                     </button>
-                  </div>
+                  </div> */}
+
+                  {/* Store Badges - Responsive */}
+        {(game?.links?.ios || game?.links?.android) && (
+          <div className="store-badges">
+            
+              <button className="store-btn" disabled={!game?.links?.ios}>
+                <a href={game?.links.ios} target="_blank" rel="noopener noreferrer">
+                  <img src="/appstore.png" alt="Download on App Store" />
+                </a>
+              </button>
+            
+             <button className="store-btn" disabled={!game?.links.android}>
+                <a href={game?.links.android} target="_blank" rel="noopener noreferrer">
+                  <img src="/googleplay.png" alt="Get it on Google Play" />
+                </a>
+              </button>
+            
+          </div>
+        )}
                 </div>
               </div>
               {i < games.length - 1 && <div className="game-divider" />}

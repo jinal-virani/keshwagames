@@ -85,6 +85,10 @@
   "description": "connect dot puzzle is simple and brain teasers game.The game represents a number dot puzzle the game to solve each puzzle connect 2dots and more dot.",
   "thumbnail": "https://play-lh.googleusercontent.com/CX1W_uBGwO_OhQmkod4wPb8c9ZYM4ZFT3YpLwxdJaxzwp7BkhmgOzzzLK7fBz6UKGA=w832-h470-rw",
   "category": [],
+   "links": {
+    "ios": "https://play.google.com/store/apps/details?id=com.dotpuzzle.connect.dot.free.marge.puzzle",
+    "android": "https://play.google.com/store/apps/details?id=com.dotpuzzle.connect.dot.free.marge.puzzle"
+  },
   "isFeatured": false,
   "createdAt": {
     "$date": "2026-04-07T12:46:20.943Z"
@@ -101,6 +105,10 @@
   "description": "Screw in the toolbox until all the same colors are together in the same toolbox. A challenging yet relaxing game to exercise your brain!",
   "thumbnail": "https://play-lh.googleusercontent.com/ciHLsLgNVZEnRB1WWjXbh3KbTUwftGiIU1X1clZbnxp_TIeaHOBy9yBui8DEYK8gIkM=w832-h470-rw",
   "category": [],
+   "links": {
+    "ios": "https://apps.apple.com/in/app/screw-sort/id6605928645",
+    "android": "https://play.google.com/store/apps/details?id=com.dotpuzzle.boltsort.puzzle"
+  },
   "isFeatured": false,
   "createdAt": {
     "$date": "2026-04-07T12:48:32.531Z"
