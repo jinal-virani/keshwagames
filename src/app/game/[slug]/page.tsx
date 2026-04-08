@@ -32,7 +32,7 @@ export default function GameDetailPage() {
           </p>
 
           {/* Learn More Button - Redirects to full page (this same page in real case) */}
-          <Link href={`/games/${gameData.slug}/full`} className="learn-more-btn">
+          <Link href={`/game/${gameData.slug}/full`} className="learn-more-btn">
             Learn More 
             <ArrowRight size={20} />
           </Link>
