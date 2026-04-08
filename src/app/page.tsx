@@ -2,13 +2,13 @@ import Link from 'next/link';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Typewriter from './components/Typewriter'; // Import the new component
-import { getAllGames } from '../services/gameService'; // Your MongoDB logic
 import { ArrowRight } from 'lucide-react';
+import allGameData from '@/alldata.json';
 import Image from 'next/image';
 
 export default async function Home() {
   // 1. Fetch backend data directly (No fetch keshava!)
-  const backendGames = await getAllGames();
+  const backendGames = allGameData;
 
   return (
     <>
@@ -22,7 +22,7 @@ export default async function Home() {
             <h1>Why Players<br />with <Typewriter /> keshava</h1>
             <p>keshava offers a premium collection of wooden puzzles, 3D puzzles, puzzle board challenges, and connect the dot games.
               Perfect for adults who want to improve focus, memory, and problem-solving skills while having fun. </p>
-            <Link href="/games" className="btn btn-orange">Play keshava Now</Link>
+            <Link href="/gamesList" className="btn btn-orange">Play keshava Now</Link>
           </div>
           <div className="hero-image">
             <img src="https://play-lh.googleusercontent.com/IRLAsmLLbV2sM0OvDawm2b9ziohdVzgde8iPBVn0FE99kDa90iSBBWSng-QpiX25WNs=w832-h470-rw"
@@ -40,8 +40,7 @@ export default async function Home() {
           </div>
           <div className="games-grid">
             {backendGames.map((game: any) => (
-              <Link href='/games' key={game._id.toString()} className="game-card">
-                {/* <img src={game.thumbnail} alt={game.title} className="game-card-img" /> */}
+              <Link href='/gamesList' key={game._id.toString()} className="game-card">
                 <div className="game-card-image-wrapper">
                   <Image
                     src={game.thumbnail}

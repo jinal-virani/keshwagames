@@ -2,14 +2,15 @@
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { getAllGames } from '@/src/services/gameService';
+import allGameData from '@/alldata.json';
 import Image from 'next/image';
 
 
 export default async function AllGamesCollection() {
 
   // 1. Fetch backend data directly (No fetch keshava!)
-  const games = await getAllGames();
+  const games = allGameData;
+  
   return (
     <>
       <Navbar />

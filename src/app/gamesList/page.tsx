@@ -1,6 +1,7 @@
-// app/games/page.tsx
+// app/gamesList/page.tsx
 import { Metadata } from "next";
 import AllGamesCollection from "./allGamesCollection";
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: "All Games | Loop Games",

@@ -95,7 +95,7 @@ export default function SupportClient() {
                               >
                                     <p className="support-extra-text">
                                           You can also check our{" "}
-                                          <Link href="/games" className="text-primary underline hover:text-[#9f1ea8]">
+                                          <Link href="/gamesList" className="text-primary underline hover:text-[#9f1ea8]">
                                                 Games page
                                           </Link>{" "}
                                           or visit the{" "}
