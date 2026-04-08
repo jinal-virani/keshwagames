@@ -1,144 +1,155 @@
-/* app/support/support.css */
+/* app/support/support.css - Fully Responsive */
 
 .support-page {
   padding-top: 6rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   background-color: #000;
   min-height: 100vh;
+  color: white;
 }
 
 .support-container {
-  max-width: 1024px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 .support-header {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 .support-title {
-  font-size: 4.5rem;
-  line-height: 1.1;
+  font-size: 2.8rem;
   font-family: var(--font-display);
-  text-shadow: 0 0 15px #ddd2228a, 0 0 30px #ddd2228a;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px #ddd2228a;
 }
 
 .support-subtitle {
-  margin-top: 1.5rem;
-  font-size: 1.875rem;
-  color: #d1d5db;
+  font-size: 1.5rem;
+  color: #ddd2228a;
+  margin-bottom: 0.5rem;
 }
 
 .support-description {
-  margin-top: 0.75rem;
-  font-size: 1.5rem;
-  color: #9ca3af;
+  font-size: 1.15rem;
+  color: #d1d5db;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
+/* Cards Container - Stacks on mobile, side-by-side on larger screens */
 .support-cards {
-  margin-top: 5rem;
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .support-cards {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
 .support-card {
   background-color: #18181b;
   border: 1px solid #27272a;
-  border-radius: 1.5rem;
-  padding: 2.5rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
 }
 
 .support-card:hover {
   border-color: #ddd2228a;
-  transform: translateY(-6px);
-  box-shadow: 0 20px 25px -5px rgb(192 38 211 / 0.15);
+  transform: translateY(-4px);
 }
 
-.support-icon-wrapper {
-  width: 3.5rem;
-  height: 3.5rem;
+.support-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
   background-color: rgba(192, 38, 211, 0.1);
-  border-radius: 1rem;
+  border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2rem;
+  color: #ddd2228a;
 }
 
 .support-card-title {
-  font-size: 1.875rem;
+  font-size: 1.6rem;
   font-family: var(--font-display);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .support-card-text {
   color: #9ca3af;
-  font-size: 1.125rem;
-  line-height: 1.7;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.support-email-btn,
+.support-facebook-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .support-email-btn {
-  margin-top: 2.5rem;
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 1.25rem 2rem;
   background-color: #ddd2228a;
   color: white;
-  font-size: 1.25rem;
-  font-weight: 700;
-  border-radius: 1rem;
-  transition: background-color 0.3s ease;
 }
 
 .support-email-btn:hover {
-  background-color: #f5eb5f8a;
+  background-color: #f7ea368a;
 }
 
 .support-facebook-btn {
-  margin-top: 2.5rem;
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 1.25rem 2rem;
   border: 2px solid #ddd2228a;
   color: #ddd2228a;
-  font-size: 1.25rem;
-  font-weight: 700;
-  border-radius: 1rem;
-  transition: all 0.3s ease;
 }
 
 .support-facebook-btn:hover {
   background-color: #ddd2228a;
-  color: #000;
+  color: black;
 }
 
+/* Extra Section */
 .support-extra {
-  margin-top: 5rem;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .support-extra-text {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #9ca3af;
+  margin-bottom: 2rem;
 }
 
 .support-extra-emoji {
-  margin-top: 3rem;
   font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .support-extra-message {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #d1d5db;
+}
+
+.support-link {
+  color: #ddd2228a;
+  text-decoration: underline;
+}
+
+.support-link:hover {
+  color: white;
 }

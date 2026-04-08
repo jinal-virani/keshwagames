@@ -1,28 +1,16 @@
+// "use client";
+
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { getAllGames } from '@/src/services/gameService';
+import allGameData from '@/alldata.json';
 import Image from 'next/image';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: "Keshwa - Wooden Puzzles & Dot Connect Brain Games for Adults",
-  description: "Play Keshwa online - wooden puzzles, puzzle board, dot puzzle, bolt sort, 3D puzzles and relaxing brain games for adults. Train your mind with premium puzzel games.",
-  keywords: [
-    "keshwa game", "wooden puzzles", "wooden puzzles for adults", "dot puzzle",
-    "connect dot", "bolt sort", "3d puzzle", "brain games for adults", "puzzle you"
-  ],
-  openGraph: {
-    title: "Keshwa - Best Wooden Puzzle Game for Adults",
-    description: "Relax and train your brain with beautiful wooden puzzles and dot connect challenges.",
-    images: "/images/keshwa-og.jpg",
-  },
-};
 
 
-export default async function GamesPage() {
+export default async function AllGamesCollection() {
 
   // 1. Fetch backend data directly (No fetch keshava!)
-  const games = await getAllGames();
+  const games = allGameData;
+  
   return (
     <>
       <Navbar />
@@ -51,7 +39,7 @@ export default async function GamesPage() {
                   <h2>{game.title}</h2>
                   <p>{game.description}</p>
                   {/* <p>{game.desc2}</p> */}
-                  <div className="store-badges">
+                  {/* <div className="store-badges">
                     <button className="store-btn">
                       <a href={game.links?.ios} target="_blank" rel="noopener noreferrer">
                         <img src="appstore.png" />
@@ -62,7 +50,26 @@ export default async function GamesPage() {
                         <img src="googleplay.png" />
                       </a>
                     </button>
-                  </div>
+                  </div> */}
+
+                  {/* Store Badges - Responsive */}
+        {(game?.links?.ios || game?.links?.android) && (
+          <div className="store-badges">
+            
+              <button className="store-btn" disabled={!game?.links?.ios}>
+                <a href={game?.links.ios} target="_blank" rel="noopener noreferrer">
+                  <img src="/appstore.png" alt="Download on App Store" />
+                </a>
+              </button>
+            
+             <button className="store-btn" disabled={!game?.links.android}>
+                <a href={game?.links.android} target="_blank" rel="noopener noreferrer">
+                  <img src="/googleplay.png" alt="Get it on Google Play" />
+                </a>
+              </button>
+            
+          </div>
+        )}
                 </div>
               </div>
               {i < games.length - 1 && <div className="game-divider" />}
