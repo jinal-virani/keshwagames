@@ -40,7 +40,7 @@ export default async function Home() {
           </div>
           <div className="games-grid">
             {backendGames.map((game: any) => (
-              <Link href={`/games`} key={game._id.toString()} className="game-card">
+              <Link href='/games' key={game._id.toString()} className="game-card">
                 {/* <img src={game.thumbnail} alt={game.title} className="game-card-img" /> */}
                 <div className="game-card-image-wrapper">
                   <Image
