@@ -1,5 +1,5 @@
 {
-  "name": "loop-games",
+  "name": "keshava-games",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,15 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.2",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "mongodb": "^7.1.1",
+    "mongoose": "^9.4.1",
     "next": "16.1.7",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
